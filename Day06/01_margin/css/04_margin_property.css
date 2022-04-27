@@ -7,12 +7,12 @@
 }
 
 section {
-    margin-top: 20px; /* mt20 */
-    margin-right: 40px; /* mr40 */
-    margin-bottom: 80px; /* mb80 */
-    margin-left: 160px; /* ml160 */
-    width: 200px; /* w200 */
-    height: 200px;/* h200 */
+    margin-top: 20px; /* 줄임 mt20 */
+    margin-right: 40px; /* 줄임 mr40 */
+    margin-bottom: 80px; /* 줄임 mb80 */
+    margin-left: 160px; /* 줄임 ml160 */
+    width: 200px; /* 줄임 w200 */
+    height: 200px;/* 줄임 h200 */
     display: inline-block;
     border:  3px solid gray;
 

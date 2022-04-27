@@ -15,7 +15,7 @@
     background-color: #ddd;
 }
 
-.box1 {padding: 20px 40px 80px 100px;}
-.box2 {padding: 20px 40px 80px;}
-.box3 {padding: 20px 40px;}
-.box4 {padding: 20px;}
+.box1 { padding-top: 20px;}     /* pt20 */
+.box2 { padding-right: 40px;}   /* pt40 */
+.box3 { padding-bottom: 60px;}  /* pt60 */
+.box4 { padding-left: 80px;}    /* pt80 */
