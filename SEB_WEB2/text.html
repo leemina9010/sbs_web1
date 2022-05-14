@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {height: 1000px;}
+        mark {background-color: pink;}
+    </style>
+
+</head>
+<body>
+    <!-- ★inline 속성 태그와 block 속성 태그의 부모&자식 사용 방법
+          block 속성의 태그의 자식으로 inline & block 속성의 태그를 모두 사용이 가능합니다
+          단, 반대로 inline 태그의 자식으로 block 속성의 태그를 사용할 수 없습니다 (inline 태그 속성만 사용 가능)
+          css로 속성을 변경하는 것 과 무관하며 오로지 태그가 default로 가지고 있는 속성에만 기준합니다.
+          ★예외★
+          h1태그는 block 속성임에도 자식으로 inline 요소의 태그만 사용할 수 있습니다.(block 요소 사용 불가능)
+    -->
+    <p></p>
+
+    <!-- 거의 4까지만 사용 -->
+    <!--
+        1~6번까지 존재하는 태그이며 반복적으로 사용이 가능합니다.(h1 태그 제외)
+        h1 태그는 웹사이트의 logo를 표시합니다. 반드시 한번만 사용.
+        포털 검색 엔진이 검색을 할 때 사이트를 전부 다 검색하는게 아니라 h1만 먼저 다 검색하면서 지나갑니다.
+     -->
+   <h1>h태그1</h1>
+   <h2>h태그2</h2>
+   <h3>h태그3</h3>
+   <h4>h태그4</h4>
+   <h5>h태그5</h5>
+   <h6>h태그6</h6>
+    
+   <!-- 등용문으로서 텍스트 영역 & 일부 영역을 감싸고자 할 때 사용하며 default로 margin 영역을 가지고 있다 (많이 사용) -->
+
+   <hr>
+
+   <p>
+       <!-- lorem10*5 + enter 단축키 -->
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora.
+       Voluptatum sint labore tempore. Debitis veritatis illum voluptatibus laudantium accusamus.
+       Cum voluptatem tenetur maiores nisi amet neque illum, assumenda nesciunt.
+       Excepturi numquam reiciendis est quo veritatis distinctio, quisquam a eius!
+       Nesciunt aspernatur recusandae amet distinctio consequuntur veritatis iste ex veniam?
+   </p>
+   
+   <!-- margin 영역은 웹사이트를 코딩할 때 한 방향만 정해서 사용하는걸 권장 (위 혹은 아래를 권장) -->
+
+   <hr>
+
+   <b>Lorem ipsum dolor sit amet.</b> <!-- 단순하게 텍스트를 굵게 표시 ( html5 넘어가면서 잘 사용 안함 ) -->
+   <br>
+   <strong>Lorem ipsum dolor sit amet.</strong> <!-- 강조, 위험 등 해당 텍스트를 강조하고자 할 때 사용하며 default로 굵게 표시됨 -->
+
+   <hr>
+
+   <!-- 
+       이텔릭체 = 텍스트를 오른쪽으로 살짝 기울게 한 글씨체
+       i = italic 의미
+     -->
+   <i>Lorem ipsum dolor sit, amet consectetur adipisicing.</i>
+   <br>
+   <!-- em은 i태그와 동일한 표현방식이지만 강조의 의미를 가지고 있습니다. -->
+   <em>Lorem ipsum dolor sit amet consectetur adipisicing.</em>
+
+   <hr>
+   <!-- 콘텐츠를 전달하는 목적의 텍스를 사용 / default = (쌍따옴표 표시됨) -->
+   <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, nemo.</q>
+
+   <hr>
+   <!-- blockquote = 들여쓰기(공간조절 안됨 잘 안씀) -->
+   <blockquote>Lorem ipsum dolor sit amet consectetur.</blockquote>
+
+   <hr>
+   <!-- mark = HTML5 태그 = 색으로 마크 됨 -->
+   <!-- 비쥬얼적인 태그를 감소하는 추세임을 생각하면 특이한 케이스 -->
+   <!-- 시각적으로 강조하는 태그이며 강조의 의미를 가지고 있는 태그 -->
+   <mark>Lorem ipsum dolor sit amet.</mark>
+   <hr>
+
+   <!-- span - text를 감싸는 용도로 사용 default : x / 굉장히 많이 자주 사용되는 태그 -->
+   <!-- (span)inline 속성 안에 block 속성을 넣을 수 없음 -->
+   <span>Lorem ipsum dolor sit amet.</span> Lorem ipsum dolor sit amet consectetur.
+
+   <hr>
+
+    <!-- ruby - ryby언어와 무관합니다 동아시아 텍스트의 부연설명으로 사용되는 태그/ 거의 사용 안함 -->
+    <!-- 당시 영국에서는 활자 크기에 따라서 보석의 이름을 붙였습니다. 그래서 위에 있는 작은 텍스트인 5.5포인트에 해당하는 이름이 루비 -->
+    <!-- 영국에서 HTML 만들었음 (팀 버너스리 만들었습니다) -->
+   <ruby>
+       大韓民國<rt>대한민국</rt>
+   </ruby>
+
+   <del>Lorem ipsum dolor sit amet.</del> <!-- 취소 선 : 텍스트를 취소했거나 취소하려고할 때 사용 (종종 사용함) -->
+
+   
+   <hr>
+   <!-- ins 문서의 텍스트 하단에 밑줄 표시 / 강조의 의미 -->
+   <ins>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta?</ins>
+
+   <hr>
+   
+   <!-- sup & sub - 자주 사용됩니다. 주로 텍스트가 많은 사이트에서 해당 단어를 설명해줄 때 사용 -->
+   Lorem, ipsum dolor. <sup><a href="#">[1]</a></sup> <!-- 위 첨자 표시됨 -->
+   <br>
+   Lorem ipsum dolor sit. <sub>아래첨자 표시됨</sub>
+
+   <hr>
+
+   <!-- 특수문자 -->
+   <!-- 엔티티(entity) : html에서 예약된 문자 -->
+   <!-- 엔티티 사용 방법 : 숫자표현 & 문자표현 -->
+
+   <p>
+      &#60;중요합니다&gt;    
+   </p>
+   <!-- 작업 할 때 내가 한 코딩 작업이 안 먹힐 때 ↓ -->
+   <!-- 크롬기준 쿠키 삭제 단축키 = 컨트롤 + 쉬프트 + r -->
+
+
+
+
+
+
+</body>
+</html>

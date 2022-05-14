@@ -11,7 +11,7 @@
 }
 
 /* background-image */
-.back {
+.back1 {
     background-image: url(../img/aloha.png);
 }
 
@@ -38,7 +38,7 @@
 /* background-position */
 .left {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
 }
 .center {
     background-repeat: no-repeat;
@@ -65,13 +65,13 @@
 .bottom-left {
     background-size: 200px 190px;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: bottom left;
 }
 
 .bottom-right {
     background-size: 200px 190px;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: bottom left;
 }
 
 .top-center {
