@@ -1,0 +1,92 @@
+
+*{margin:0; padding:0; box-sizing:border-box;}
+ol,ul,dl{list-style:none;}
+
+.container{
+    width: 50vw;
+    height: 20vh;
+    border: 5px solid black;
+}
+
+.item {
+    color: #fff;
+    font-size: 20px;
+}
+.red{background: red;}
+.orange{background: orange;}
+.green{background: green;}
+
+.type1{
+    /* display:flex:
+    default:가로 배치 */
+    display: flex;
+
+    /* flex-diraction */
+    /* row / row-reverse / column / column-reverse */
+    /* flex-direction의 default = row */
+    flex-direction: row-reverse; /* 순서 거꾸로 배치 */
+    /* row : items를 수평축(왼쪽에서 오른쪽)으로 배치*/
+    /* row - reverse items를 "row"의 반대축으로 배치 */
+    /* column : items를 수직축(위에서 아래 )으로 배치 */
+    /* column-reverse : items를 "column"의 반대축으로 배치 */
+    flex-direction: column-reverse;
+}
+
+
+/* flex를 주면 자식이 가지고 있는 width & heigth은 최대 값을 의미하며
+부모가 자식들이 가지고 있는 공간보다 작아질 때 부모를 기준으로 축소합니다. */
+/* 기본적으로 한 줄에만 표시 */
+.type2{
+        /* flex-warp = items의 여러줄 묶음을 설정 */
+    /* flex-warp의 default = nowrap = 줄바꿈하지 않는다 */
+    /* wrap = 줄바꿈 허용 */
+    /* nowrap = 줄바꿈 허용하지 않는다 */
+    /* warp-reverse :  items를 "wrap"의 역방향으로 묶음 */
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.type2 .item{
+    width: 200px;
+    height: 200px;
+}
+
+/* justify-content = 가로축 설정 */
+/* 가로 배치된 컨텐츠의 정렬 방식 */
+/* default: flex-start */
+/* flex-start : 왼쪽에서 오른쪽으로 배치 */
+/* flex-end : 오른쪽에서 왼쪽으로 배치 */
+/* center : 중앙 배치 */
+/* space-between : 시작 item은 시작점에, 마지막 item은 끝점ㅂ에 정렬시키고
+나머지 item(2번째~마지막 전)은 사이에 고르게 정렬 */
+/* space-around: 양 끝에 일정한 여백을 가지고 나머지 item들이 균등한 여백으로 배치 */
+/* space-evenly: 모든 item들이 균등한 여백을 가지고 정렬 배치 */
+/* space-around 와 space-evenly 의 차이 
+space-around는 양 끝의 여백이 가운데 item들의 여백의 절반을 가짐
+space-evenly는 양 끝의 여백도 모두 동일한 여백을 가짐*/
+.type3{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* align-items = 세로축 설정 */
+/* align-items의 default = stretch(늘리다) */
+/* flex item을 부모인 flex container의 width & heigth만큼 늘려줍니다 */
+/* 사용시 주의할 점은 flex-direction의 값이 row 일 때 부모가 height을 가지고
+있지 않으면 효과가 나타나지 않습니다. */
+ /* ★부모가 자식에게 height 값을 상속할 때 해당 부모가 반드시 스스로 height 값을 
+가지고 있어야 상속해줍니다. */
+/* 부모가 자식에게 height 값을 주는 경우는 full page 사이트 제작할 때 */
+/* html, body {height:100%;}사용할 때 말고는 극히 드물다고 봅니다. */
+
+/* flex-start : 부모의 상단 배치 */
+/* flex-end : 부모의 하단 배치 */
+/* center : 중앙 배치 */
+.type4{
+    display: flex;
+    align-items: center;
+}
+
+/* flex item */
+/*  */

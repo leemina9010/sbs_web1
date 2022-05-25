@@ -1,0 +1,45 @@
+
+
+*{margin:0; padding:0; box-sizing:border-box;}
+ol,ul,dl{list-style:none;}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit; /* inherit : 초기화 (상속) */
+}
+
+
+nav{
+    background: #fff;
+    box-shadow: 0 0 5px gray;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 25px;
+    line-height: 2; /* (2; = 2배)px 없으면 배수로 */
+    font-weight: 600;
+}
+
+nav ul > li{
+    position: relative;
+}
+
+nav ul > li:after {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    content: "";
+    width: 0;
+    height: 10px;
+    background: blue;
+    opacity: 0.3;
+    transition: width 1s;
+}
+
+nav ul > li:hover:after{
+    width: 100%;
+}

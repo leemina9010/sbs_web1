@@ -1,0 +1,81 @@
+
+*{margin:0; padding:0; box-sizing:border-box;}
+ol,ul,dl{list-style:none;}
+body{height: 3000px;}
+
+
+div{
+    width: 50vw;
+    height: 20vh;
+    border: 5px solid #000;
+    display: flex;
+}
+p{
+    width: 100px;
+    color: #fff;
+    font-size: 20px;
+}
+div p:nth-child(1){background: tomato;}
+div p:nth-child(2){background: orange;}
+div p:nth-child(3){background: green;}
+
+/* flex-grow */
+/* flex item의 확장에 대한 속성 */
+/* 0과 양의 정수를 속성 값으로 사용하느며 단위는 없습니다. */
+/* 1 = 100% */
+/* default = 0; */
+/* 속성 값이 0이면 flex container의 크기가 아무리 커져도 flex item의 크기가 커지지 않고
+원래 크기를 유지합니다
+그래서, flex container의 크기가 커질 때 flex item의 크기도 커지게 하려면
+ 1 이상의 값을 설정해야 합니다. */
+.box1 p{
+    flex-grow: 1;
+}
+
+
+/* flex-shrink */
+/* flex item의 축소에 대한 속성 */
+/* 0과 양의 정수를 속성 값으로 사용하며, 단위는 없습니다. */
+/* 1 = 100% */
+/* default = 1 */
+/* 속성 값이 0이면 flex container의 크기가 flex item보다 작아져도
+flex item의 크기가 줄어들지 않고 원래 크기를 유지합니다. */
+/* 속성 값이 1이면 flex item의 크기가 flex container의 크기에 맞춰 줄어듭니다. */
+.box2 p{
+    flex-shrink: 0;
+}
+
+
+
+/* flex-basis */
+/* flex item의 기본 크기를 결정하는 속성 */
+/* default = auto */
+/* width & height 명령어에 사용하는 모든 단위(px,%,em,rem 등)를 속성 값으로 사용 */
+.box3 p{
+    flex-basis: 300px;
+}
+/* 각각 별도로 설정 ↓ */
+.box3 p:nth-child(1){ flex-basis: 50px;}
+.box3 p:nth-child(2){ flex-basis: 50%;}
+.box3 p:nth-child(3){ flex-basis: 200px;}
+
+
+
+/* flex */
+/* flex : felx-grow, flex-shrink, flex-basis; 순으로 사용 */
+/* 
+   선택자 {
+       flex-grow:1;
+       flex-shrink:1
+       flex-basis:auto;
+       }   = flex 1 1 auto;
+*/
+
+/* default : flex:0 1 auto; */
+/* flex: 1; = 속성 값을 한개만 사용했을 시에는 flex-grow의 값으로 인식하여,
+flex:1; = flex:1 1 auto; */
+/* flex:auto; = flex:1 1 auto; = flex: 1; */
+/* flex: none; = flex: 0 0 auto = flex item들의 크기를 고정 */
+.box4 p{
+    flex: 1 0 auto;
+}
