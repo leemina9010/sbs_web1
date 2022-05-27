@@ -1,0 +1,95 @@
+
+*{margin:0; padding:0; box-sizing:border-box;}
+ol,ul,dl{list-style:none;}
+
+.visual{
+    /* height: 452px; */
+    background: url("../과제/main_bg.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.visual h2{
+    font-size: 60px;
+    margin-bottom: 60px;
+    padding-top: 116px;
+}
+.visual p{
+    line-height: 40px;
+    padding-bottom: 116px;
+
+}
+
+.ebooks_list{}
+.ebooks_list .inner{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* padding & border 사용시 해당 선택자가
+    width & height 값을 스스로 가지고 있는지 체크하면 좋습니다 */
+}
+.ebooks_list h3{
+    font-size: 28px;
+    color: #9d9d9d;
+    font-weight: 400;
+    /* text-transform */
+    /* none / capicalize / uppercase / lowercase / intial / inherit */
+    /* default : none */
+    /* none : 입력된 그대로 출력 */
+    /* capicalize : 단어의 첫번째 글자를 대문자로 바꿔서 출력  */
+    /* uppercase : 모든 글자를 대문자로 바꿔서 출력 */
+    /* lowercase : 모든 글자를 소문자로 바꿔서 출력 */
+    /* intial : 초기화 = 기본 값으로 설정 */
+    /* inherit : 상속 = 부모 요소의 상속 값을 받음 */
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.ebooks_list .ebooks{
+
+}
+.ebooks_list .ebooks ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ebooks_list .ebooks ul > li{
+    width: 210px;
+    margin-bottom: 60px;
+}
+.ebooks_list .ebooks ul > li div:first-child{
+    min-height: 298px;
+    margin-bottom: 10px;
+}
+.ebooks_list .ebooks ul > li > p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #0075d8;
+    margin-bottom: 10px;
+    min-height: 81px;
+}
+.ebooks_list .ebooks ul > li button{
+    display: block;
+    width: 100%;
+    height: 36px;
+    outline: none;
+    background: #fff;
+    border: 1px solid #0075d8;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0075d8;
+    text-transform: capitalize;
+    border-radius: 7px;
+    transition: background 0.5s, color 1s;
+    /* button 태그의 cursor */
+    /* default = cursor:default */
+    cursor: pointer;
+}
+.ebooks_list .ebooks ul > li button:hover{
+    background: #0075d8;
+    color: #fff;
+}
