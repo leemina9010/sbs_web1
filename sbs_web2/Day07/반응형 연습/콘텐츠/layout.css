@@ -31,7 +31,7 @@ body{
     margin-bottom: 30px;
 
 }
-.card_container{}
+
 .card_container .inner{
     max-width: 1300px;
     width: 100%;
@@ -47,22 +47,90 @@ body{
 .card_container ul > li{
     width: 25%;
     margin-bottom: 40px;
+    padding: 0 20px;
+    transition: all 0.35s;
+}
+.card_container ul > li *{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.card_container ul > li *:last-child{
+    margin-bottom: 0;
 }
 
 .card_container ul > li img{
     width: 100%;
     max-width: 296px;
 }
+.card_container ul > li h3{
+    font-size: 24px;
+}
+
+
+
+#footer{
+    background: #333;
+}
+
+#footer .inner{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 10px 30px 30px;
+}
+
+#footer .ft_con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    
+}
+#footer .ft_con .ft_logo{}
+#footer .ft_con ul{
+    display: flex;
+}
+#footer .ft_con ul > li{
+    margin-left: 30px;
+    font-size: 14px;
+}
+#footer .ft_con ul > li > a{
+    transition: color 0.35s;
+}
+#footer .ft_con ul > li > a:hover{
+    color: tomato;
+}
+#footer .copy{
+    font-size: 12px;
+}
+
 
 @media screen and (max-width:1299px) {
     .card_container ul > li {
-        width: 33.3333%;
+        width: 33.3333%; /* 컨텐츠의 개수 3개 */
     }
     
 }
 @media screen and (max-width:899px) {
     .card_container ul > li {
         width: 50%;
+    }
+    #footer .ft_con{
+        flex-direction: column;
+    }
+    #footer .ft_logo{
+        margin-bottom: 20px;
+    }
+    #footer .ft_con ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    #footer .ft_con ul > li{
+        margin-bottom: 10px;
+    }
+    #footer .ft_con ul > li:last-child{
+        margin-bottom: 0;
     }
     
 }
