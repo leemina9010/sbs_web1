@@ -1,0 +1,338 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+ol,ul,dl{list-style:none;}
+a{text-decoration:none;color:inherit}
+
+.inner{
+    max-width:1250px;
+    width:100%;
+    margin:0 auto;
+    padding:0 25px;
+}
+
+
+#header{
+    background:#1e172a;
+}
+#header .inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;;
+    padding:10px 25px;
+    color:#fff;
+
+}
+
+#header .logo{
+
+}
+/* width & height 동시에 줄 필요성이 있는지 확인해보는게 좋습니다 */
+/* 한쪽만 주는게 이미지가 깨지지 않고 가변하기 쉽기 때문 */
+#header .logo img{
+    width:120px;
+}
+
+#header .gnb{
+    width:800px;
+}
+#header .gnb ul{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+#header .language{
+
+}
+
+#header .language select{
+    padding:5px 10px;
+    appearance: none;
+    background:#1e172a url("img/bg_sel_family.png") no-repeat center right;
+    padding-right:50px;
+    outline:none;
+    color:#fff;
+}
+
+#header .language select option{
+    background:#1e172a;
+    color:#fff;
+}
+
+/* header End */
+
+
+#visual{
+    background:url("img/visual_bg.png") no-repeat center;
+    background-size:cover;
+    margin-bottom:100px;
+}
+#visual .inner{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    color:#fff;
+}
+#visual h2{
+    padding-top:100px;
+    margin-bottom:70px;
+}
+#visual article{
+    padding-bottom:100px;
+}
+#visual article ul{
+    display:flex;
+}
+#visual article ul > li{
+    width:160px;
+    height:140px;
+    background:tomato;
+}
+#visual article ul > li:first-child{
+    background:orange;
+}
+#visual article ul > li:last-child{
+    background:blue;
+}
+#visual article ul > li > a{
+    display:flex;
+    height:100%;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;;
+}
+#visual article ul > li > a img{
+    /* display:block; */
+}
+#visual article ul > li > a span{}
+
+
+#banner {
+    margin-bottom: 70px;
+}
+#banner .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#banner article {
+    width: 33.3333%;
+    max-width: 360px;
+}
+
+#banner article:nth-child(n+1):nth-child(-n+3){
+    margin-bottom: 30px;
+}
+
+#banner article a:not(.banner6 a){
+    display: block;
+    font-size: 0;
+}
+
+#banner article a{
+    display: block;
+    font-size: 0;
+}
+
+#banner .tit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#banner .tit h3{
+    font size: 20px;
+}
+
+#banner .notice{
+    border-top: 3px solid #000;
+    padding-top: 15px;
+}
+#banner .notice ul{}
+#banner .notice ul > li{
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+#banner .notice ul > li:hover{
+    text-decoration: underline;
+}
+
+#banner .notice ul > li:last-child{
+    margin-bottom: 0;
+}
+#banner .notice ul > li > a{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+}
+
+#banner .notice ul > li > a .date{
+    font-size: 10px;
+    color: gray;
+}
+
+
+/* banner end */
+
+#footer {
+    background: #282828;
+    color: #b9b9b9;
+    font-size: 11px;
+}
+
+#footer .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+
+#footer .inner .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#footer .inner .info .ft_logo {
+    margin-right: 20px;
+}
+
+#footer .inner .info p:first-child {
+    margin-bottom: 10px;
+}
+
+#footer .sns{}
+#footer .sns ul{
+    display: flex;
+    align-items: center;
+}
+#footer .sns ul>li{}
+#footer .sns ul>li select{
+    background: #282828;
+    padding: 5px 60px 5px 10px;
+    color: #fff;
+    outline: none;
+    appearance: none;
+    background: url("img/bg_sel_family.png") no-repeat center right;
+}
+#footer .sns ul>li select option{
+    background: #282828;
+    color: #fff;
+}
+
+@media all and (max-width:1199px){
+    #header .inner{
+        flex-direction: column;
+        padding: 20px 25px;
+    }
+    #header .logo{
+        margin-bottom: 20px;
+    }
+    #header .gnb{
+        width: 100%;
+    }
+    #header .language{
+        display: none;
+    }
+    #visual ul{
+        flex-wrap: wrap;
+        max-width: 480px;
+    }
+    #visual ul > li{
+        width: 33.333%;
+        max-width: 140px;
+    }
+    #banner .inner{
+        justify-content: space-evenly;
+    }
+    #banner article {
+        width: 50%;
+    }
+}
+
+@media all and (max-width:899px){
+    #banner .inner{
+        justify-content: center;
+    }
+    #banner article{
+        width: 100%;
+        max-width: 550px;
+        margin-bottom: 30px;
+    }
+    #banner article:last-child{
+        margin-bottom: 0;
+    }
+    #banner article img{
+        width: 100%;
+    }
+    #footer .inner{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #footer .info{
+        flex-direction: column;
+    }
+    #footer .info .ft_logo{
+        margin-bottom: 10px;
+    }
+    #footer .sns{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
